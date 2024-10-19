@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="CoinFlip"
+                    android:textSize="40dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@color/design_default_color_primary"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/coin"
+                android:layout_below="@id/header"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/image"
+
+                    android:layout_marginVertical="30dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/coin"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/headsButton"
+                        android:text="Fej"/>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tailsButton"
+                        android:text="Írás"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:text="Dobások"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_columnWeight="1" />
+                <TextView
+                    android:text="Győzelem"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_columnWeight="1" />
+                <TextView
+                    android:text="Vereség"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_columnWeight="1" />
+
+                <TextView
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:layout_width="0dp"
+                    android:id="@+id/throwCount"
+                    android:gravity="center"
+                    android:layout_columnWeight="1" />
+                <TextView
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:layout_width="0dp"
+                    android:id="@+id/winCount"
+                    android:gravity="center"
+                    android:layout_columnWeight="1" />
+                <TextView
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:layout_width="0dp"
+                    android:id="@+id/lossCount"
+                    android:gravity="center"
+                    android:layout_columnWeight="1" />
+            </GridLayout>
+
+        </RelativeLayout>i
+
+</androidx.constraintlayout.widget.ConstraintLayout>
